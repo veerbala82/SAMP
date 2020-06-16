@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace SAMP.API.Controllers
 {
-    [Authorize]
+    [CustomAuthorize]
     [RoutePrefix("Api/Login")]
     public class LoginController : ApiController
     {
