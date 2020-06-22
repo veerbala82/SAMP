@@ -1,5 +1,6 @@
 ﻿using SAMP.API.Common;
 using SAMP.API.TokenManagement;
+using SAMP.BAL;
 using SAMP.Models.Login;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,11 @@ namespace SAMP.API.Controllers
         /// The Logger
         /// </summary>
         private static log4net.ILog logger = null;
+
+        /// <summary>
+        /// ICustomerDeliveryService object
+        /// </summary>
+        private readonly ILoginService _loginService;
         #endregion
 
         #region Constructor
@@ -27,8 +33,9 @@ namespace SAMP.API.Controllers
         /// LoginController Constructor
         /// </summary>
         /// <param name=""></param>
-        public LoginController()
+        public LoginController(ILoginService loginService)
         {
+            this._loginService = loginService;
             logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
             logger.Info(string.Format("{0}.{1} - START", DateTime.Now, DateTime.Now.Day));
         }
@@ -46,69 +53,38 @@ namespace SAMP.API.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        //[AllowAnonymous]
+        //[HttpPost]
+        //[Route("UserLogin")]
+        //public LoginRes UserLogin(LoginReq req)
+        //{
+        //    logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
+
+        //    logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
+
+        //    return new LoginRes { Status = "Success", Message = TokenManager.GenerateToken(req.Email) };
+        //}
+
         [AllowAnonymous]
         [HttpPost]
-        [Route("UserLogin")]        
+        [Route("UserLogin")]
         public LoginRes UserLogin(LoginReq req)
         {
             logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
 
             logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
 
-            return new LoginRes { Status = "Success", Message = TokenManager.GenerateToken(req.Email) };
-        }
+            //return new LoginRes { Status = "Success", Message = TokenManager.GenerateToken(req.EmailAddress) };
 
-        // GET: api/Login
-        [HttpGet]
-        [Route("TestToken")]
-        public IEnumerable<string> TestToken()
-        {
-            logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
+            LoginRes objRes = _loginService.ValidateLoginCredentials(req);
 
-            logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
-
-            return new string[] { "value1", "value2" };
-        }
-
-        [Route("Validate")]
-        [HttpGet]
-        public LoginRes Validate(string token, string username)
-        {
-            //int UserId = new UserRepository().GetUser(username);
-            //if (UserId == 0) return new LoginRes { Status = "Invalid", Message = "Invalid User." };
-            string tokenUsername = TokenManager.ValidateToken(token);
-            if (username.Equals(tokenUsername))
+            if(objRes.ValidUser == 1)
             {
-                return new LoginRes
-                {
-                    Status = "Success",
-                    Message = "OK",
-                };
+                objRes.Token = TokenManager.GenerateToken(objRes.Email);
             }
-            return new LoginRes { Status = "Invalid", Message = "Invalid Token." };
+
+            return objRes;
         }
 
-
-        // GET: api/Login/5
-        [Route("Get2")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Login
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Login/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Login/5
-        public void Delete(int id)
-        {
-        }
     }
 }

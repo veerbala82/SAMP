@@ -2,8 +2,10 @@
 {
     public class LoginRes
     {
-        public string Status { set; get; }
-        public string Message { set; get; }
-        public string UN { set; get; }
+        public int ValidUser { set; get; }
+        public string Email { set; get; }
+        public string FirstName { set; get; }
+        public string LastName { set; get; }
+        public string Token { set; get; }
     }
 }

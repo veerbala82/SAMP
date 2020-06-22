@@ -20,7 +20,7 @@ namespace SAMP.API.TokenManagement
             {
                 Subject = new ClaimsIdentity(new[] {
                       new Claim(ClaimTypes.Name, username)}),
-                Expires = DateTime.UtcNow.AddMinutes(90),
+                Expires = DateTime.UtcNow.AddMinutes(1),
                 SigningCredentials = new SigningCredentials(securityKey,
                 SecurityAlgorithms.HmacSha256Signature)
             };

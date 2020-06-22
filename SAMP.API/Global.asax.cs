@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using SAMP.API.Common;
+using System.Web.Http;
 
 namespace SAMP.API
 {
@@ -12,6 +13,7 @@ namespace SAMP.API
         /// </summary>     
         protected void Application_Start()
         {
+            Bootstrapper.Run();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             log4net.Config.XmlConfigurator.Configure();
         }

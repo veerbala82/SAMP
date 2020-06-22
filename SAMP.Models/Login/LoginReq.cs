@@ -6,7 +6,8 @@ namespace SAMP.Models.Login
 {
     public class LoginReq
     {
-        public string Email { set; get; }
+        public string EmailAddress { set; get; }
         public string Password { set; get; }
     }
 }
+    
