@@ -49,7 +49,15 @@ namespace SAMP.API.Common
 
             builder.RegisterType<LoginService>()
                    .As<ILoginService>()
-                   .InstancePerRequest();            
+                   .InstancePerRequest();
+
+            builder.RegisterType<SOWMasterCommands>()
+           .As<ISOWMasterCommands>()
+           .InstancePerRequest();
+
+            builder.RegisterType<SOWMasterService>()
+                   .As<ISOWMasterService>()
+                   .InstancePerRequest();
 
             ////Set the dependency resolver to be Autofac.
             container = builder.Build();

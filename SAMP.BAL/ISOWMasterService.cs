@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SAMP.DAL
+namespace SAMP.BAL
 {
-    public interface ISOWMasterCommands
+    public interface ISOWMasterService
     {
-        SOWSearchRes GetSOWs(SearchFiltersReq req);
+        SOWSearchRes GetSOWs(SearchFiltersReq req);        
 
         SOWSaveRes InsertSOWMaster(SOWReq req, string user);
 

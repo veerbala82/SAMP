@@ -7,5 +7,6 @@
         public string FirstName { set; get; }
         public string LastName { set; get; }
         public string Token { set; get; }
+        public string UID { set; get; }
     }
 }

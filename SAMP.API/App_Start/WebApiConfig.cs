@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using SAMP.API.Common;
+using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace SAMP.API
@@ -16,6 +17,8 @@ namespace SAMP.API
             // Web API configuration and services
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
+
+            config.Filters.Add(new ValidateModelFilter());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

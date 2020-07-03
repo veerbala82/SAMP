@@ -75,6 +75,9 @@
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+    <Reference Include="System.Json, Version=2.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Json.4.7.1\lib\net461\System.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -128,10 +131,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\ApiException.cs" />
+    <Compile Include="Common\ApiExceptionFilterAttribute.cs" />
     <Compile Include="Common\AutofacWebapiConfig.cs" />
     <Compile Include="Common\Bootstrapper.cs" />
     <Compile Include="Common\EncryptDecrypt.cs" />
     <Compile Include="Common\CustomAuthorize.cs" />
+    <Compile Include="Common\ValidateModelFilter.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SOWMasterController.cs" />
@@ -152,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SAMP.BAL\SAMP.BAL.csproj">

@@ -13,7 +13,7 @@ using System.Web.Http;
 namespace SAMP.API.Controllers
 {
     [CustomAuthorize]
-    [RoutePrefix("Api/Login")]
+    [RoutePrefix("Api/Login")]  
     public class LoginController : ApiController
     {
         #region Private Members
@@ -72,15 +72,14 @@ namespace SAMP.API.Controllers
         {
             logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
 
-            logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
-
-            //return new LoginRes { Status = "Success", Message = TokenManager.GenerateToken(req.EmailAddress) };
+            logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));            
 
             LoginRes objRes = _loginService.ValidateLoginCredentials(req);
 
             if(objRes.ValidUser == 1)
             {
                 objRes.Token = TokenManager.GenerateToken(objRes.Email);
+                objRes.UID = EncryptDecrypt.Encrypt(objRes.Email);
             }
 
             return objRes;

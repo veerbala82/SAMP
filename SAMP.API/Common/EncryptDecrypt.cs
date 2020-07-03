@@ -12,7 +12,7 @@ namespace SAMP.API.Common
     {
         public static string Encrypt(string encryptString)
         {
-            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXZY";
             byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
             using (Aes encryptor = Aes.Create())
             {
@@ -36,7 +36,7 @@ namespace SAMP.API.Common
 
         public static string Decrypt(string cipherText)
         {
-            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXZY";
             cipherText = cipherText.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
             using (Aes encryptor = Aes.Create())
