@@ -24,7 +24,7 @@ namespace SAMP.Models.SOW
     {
         [Required]
         public string SOWNo { get; set; }
-
+        [Required]
         public string SOWDesc { get; set; }
 
         public string SOWStartDate { get; set; }

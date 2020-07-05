@@ -83,9 +83,10 @@ namespace SAMP.DAL
 
             var data = queryParameters.Get<string>("@SavedSOWNo");
 
-            SOWSaveRes saveRes = new SOWSaveRes();
-
-            saveRes.Response = new SaveResponse();
+            SOWSaveRes saveRes = new SOWSaveRes
+            {
+                Response = new SaveResponse()
+            };
 
             saveRes.Response.SOWNo = data;
             saveRes.Response.EsErrors = null;

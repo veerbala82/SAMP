@@ -1,10 +1,12 @@
 ﻿using SAMP.API.TokenManagement;
+using SAMP.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -19,6 +21,12 @@ namespace SAMP.API.Common
             if (SkipAuthorization(actionContext)) return;
 
             base.OnAuthorization(actionContext);
+
+            Errors Errors = new Errors
+            {
+                Response = new Response() { EsErrors = new EsErrors() }
+            };
+
             try
             {
                 if (actionContext.Request.Headers.GetValues("Authorization") != null)
@@ -30,27 +38,40 @@ namespace SAMP.API.Common
 
                     if (string.IsNullOrEmpty(userName))
                     {
-                        actionContext.Response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                        Errors.Response.EsErrors.ErrorCode = 401;
+                        Errors.Response.EsErrors.ErrorDescription = "Unauthorized access.";
+                        Errors.Response.EsErrors.ErrorReference = string.Empty;
+                        
+                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, Errors, JsonMediaTypeFormatter.DefaultMediaType);
                         return;
                     }
-
+                    
                     HttpContext.Current.Response.AddHeader("AuthenticationToken", authenticationToken);
                     return;
                 }
                 else
-                {
-                    actionContext.Response = new HttpResponseMessage(HttpStatusCode.Forbidden);
+                {                    
+                    Errors.Response.EsErrors.ErrorCode = 401;
+                    Errors.Response.EsErrors.ErrorDescription = "Unauthorized access. Authorization token not available.";
+                    Errors.Response.EsErrors.ErrorReference = string.Empty;
+
+                    actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, Errors, JsonMediaTypeFormatter.DefaultMediaType);
                     return;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                actionContext.Response = new HttpResponseMessage(HttpStatusCode.Forbidden);
+                Errors.Response.EsErrors.ErrorCode = 400;
+                Errors.Response.EsErrors.ErrorDescription = "Bad request. Contact system administrator";
+                Errors.Response.EsErrors.ErrorReference = ex.Message;
+
+                actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, Errors, JsonMediaTypeFormatter.DefaultMediaType);                
                 return;
             }
-            
+
         }
 
+        //This method is to skip methods with [AllowAnonymous] attribute
         private static bool SkipAuthorization(HttpActionContext actionContext)
         {
             Contract.Assert(actionContext != null);
