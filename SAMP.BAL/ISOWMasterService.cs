@@ -8,7 +8,7 @@ namespace SAMP.BAL
 {
     public interface ISOWMasterService
     {
-        SOWSearchRes GetSOWs(SearchFiltersReq req);        
+        SOWSearchResponse GetSOWs(SearchFiltersReq req);        
 
         SOWSaveRes InsertSOWMaster(SOWReq req, string user);
 

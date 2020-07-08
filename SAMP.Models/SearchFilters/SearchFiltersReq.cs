@@ -14,5 +14,7 @@ namespace SAMP.Models.SearchFilters
         public string FilterName { get; set; }
      
         public string FilterValue { get; set; }
+
+        public string FilterValueMatch { get; set; }
     }
 }

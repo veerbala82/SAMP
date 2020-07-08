@@ -13,7 +13,7 @@ namespace SAMP.BAL
             this._sowMasterCommand = sowMasterCommand;
         }
 
-        public SOWSearchRes GetSOWs(SearchFiltersReq req)
+        public SOWSearchResponse GetSOWs(SearchFiltersReq req)
         {
             return this._sowMasterCommand.GetSOWs(req);
         }

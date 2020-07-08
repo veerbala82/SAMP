@@ -8,7 +8,7 @@ namespace SAMP.DAL
 {
     public interface ISOWMasterCommands
     {
-        SOWSearchRes GetSOWs(SearchFiltersReq req);
+        SOWSearchResponse GetSOWs(SearchFiltersReq req);
 
         SOWSaveRes InsertSOWMaster(SOWReq req, string user);
 

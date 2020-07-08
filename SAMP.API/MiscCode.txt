@@ -1,0 +1,28 @@
+﻿//SOW Search Response
+    public partial class SOWSearchResponse
+    {
+        public SearchResponse Response { get; set; }
+    }
+
+    public partial class SearchResponse
+    {
+        public EsSOWsSearchResponse EsSOWMaster { get; set; }
+
+        public object EsErrors { get; set; }
+    }
+
+    public partial class EsSOWsSearchResponse
+    {
+        public List<SOWMasterSearchResponse> SOWMasters { get; set; }
+    }
+
+    public partial class SOWMasterSearchResponse
+    {
+        public string SOWNo { get; set; }
+
+        public string SOWDesc { get; set; }       
+    }
+
+	  sOWSearchResponse.Request.EsSOWMaster.SOWMasters[i].ResourceUtilizationDetails = new List<ResourceUtilizationDetailSearchResponse>();
+
+                    sOWSearchResponse.Request.EsSOWMaster.SOWMasters[i].ResourceUtilizationDetails.Add(new ResourceUtilizationDetailSearchResponse { ResourceUtilizationId = RUD.ResourceUtilizationId, SOWId = RUD.SOWId, ResourceId = RUD.ResourceId });

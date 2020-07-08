@@ -1,40 +1,68 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SAMP.Models.SOW
 {
-    //Search Response
-    public class SOWSearchRes
+    //SOW Search Response
+    public partial class SOWSearchResponse
     {
-        public SearchResponse Response { get; set; }
+        public ResponseSR Request { get; set; }
     }
 
-    public class SearchResponse
+    public partial class ResponseSR
     {
-        public EsSOWs EsDeliveryNotes { get; set; }
-
+        public EsSOWMasterSR EsSOWMaster { get; set; }
         public object EsErrors { get; set; }
     }
 
-    public class EsSOWs
+    public partial class EsSOWMasterSR
     {
-        public List<SOW> SOWs { get; set; }
+        public List<SOWMasterSR> SOWMasters { get; set; }
     }
 
-    public class SOW
+    public partial class SOWMasterSR
     {
-        public string SOWNo { get; set; }
-
-        public string SOWDesc { get; set; }
-
-        public List<Resource> Resources { get; set; }
+        public int SOWId { get; set; }
+        public string SowNo { get; set; }
+        public string SowDesc { get; set; }
+        public string SOWStartDate { get; set; }
+        public string SOWEndDate { get; set; }
+        public string PO { get; set; }
+        public int SOWType_SystemParamId { get; set; }
+        public string ActionBySPOC { get; set; }
+        public int SOWAmount { get; set; }
+        public int AccountId { get; set; }
+        public int CustMgrId { get; set; }
+        public int Status_SystemParamId { get; set; }
+        public bool PartialBilliing { get; set; }
+        public int FOC { get; set; }
+        public List<ResourceUtilizationDetailSearchResponse> ResourceUtilizationDetails { get; set; }
+        public List<PricingScheduleDetailSearchResponse> PricingScheduleDetails { get; set; }
     }
 
-    public class Resource
+    //Add Later
+    public partial class ResourceUtilizationDetailSearchResponse
     {
-        public string DisplayName { get; set; }
+        public int ResourceUtilizationId { get; set; }
+        public int SOWId { get; set; }
+        public int ResourceId { get; set; }
+        public string WorkOrderStartDate { get; set; }
+        public string WorkOrderEndDate { get; set; }
+        public string BenchStartDate { get; set; }
+        public string BenchEndDate { get; set; }
+        public string FoCStartDate { get; set; }
+        public string FoCEndDate { get; set; } 
+    }
 
-        public string EmpID { get; set; }
-
-        public string SecurityID { get; set; }
+    public partial class PricingScheduleDetailSearchResponse
+    {
+        public int PricingSchId { get; set; }
+        public int SOWId { get; set; }
+        public string MonthName { get; set; }
+        public int BillableDays { get; set; }
+        public string MilestoneName { get; set; }
+        public string MilestoneValue { get; set; }
+        public int RevisionNumber { get; set; }
+        public string RevisionDate { get; set; }       
     }
 }

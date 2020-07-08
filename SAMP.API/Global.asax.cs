@@ -14,8 +14,7 @@ namespace SAMP.API
         protected void Application_Start()
         {
             Bootstrapper.Run();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            GlobalConfiguration.Configuration.Filters.Add(new ApiExceptionFilterAttribute());
+            GlobalConfiguration.Configure(WebApiConfig.Register);            
             log4net.Config.XmlConfigurator.Configure();
         }        
     }

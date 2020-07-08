@@ -1,6 +1,7 @@
 ﻿using SAMP.API.Common;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.ExceptionHandling;
 
 namespace SAMP.API
 {
@@ -19,6 +20,8 @@ namespace SAMP.API
             config.EnableCors(cors);
 
             config.Filters.Add(new ValidateModelFilter());
+            config.Filters.Add(new ApiExceptionFilterAttribute());
+            config.Services.Add(typeof(IExceptionLogger), new Log4NetExceptionLogger());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

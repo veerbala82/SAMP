@@ -6,6 +6,8 @@ using SAMP.Models.SOW;
 using SAMP.Models.SearchFilters;
 using System;
 using System.Globalization;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace SAMP.DAL
 {
@@ -29,7 +31,7 @@ namespace SAMP.DAL
             queryParameters.Add("@SOWAmount", req.Request.EsSOWMaster.SOWMasters[0].SOWAmount);
             queryParameters.Add("@AccountId", req.Request.EsSOWMaster.SOWMasters[0].AccountId);
             queryParameters.Add("@CustMgrId", req.Request.EsSOWMaster.SOWMasters[0].CustMgrId);
-            queryParameters.Add("@Status_SystemParamId", req.Request.EsSOWMaster.SOWMasters[0].Status_SystemParamId);            
+            queryParameters.Add("@Status_SystemParamId", req.Request.EsSOWMaster.SOWMasters[0].Status_SystemParamId);
             queryParameters.Add("@PartialBilliing", req.Request.EsSOWMaster.SOWMasters[0].PartialBilliing);
             queryParameters.Add("@FOC", req.Request.EsSOWMaster.SOWMasters[0].FOC);
             queryParameters.Add("@CreatedUser", user);
@@ -77,7 +79,7 @@ namespace SAMP.DAL
             queryParameters.Add("@PSD", pricingScheduleDetailTable.AsTableValuedParameter("dbo.PricingScheduleDetailsType"));
 
             //Output from SP
-            queryParameters.Add("@SavedSOWNo", dbType: DbType.String, direction: ParameterDirection.Output, size: 50);            
+            queryParameters.Add("@SavedSOWNo", dbType: DbType.String, direction: ParameterDirection.Output, size: 50);
 
             SqlMapper.Execute(con, "dbo.sp_SOWMasterInsert", queryParameters, commandType: StoredProcedure);
 
@@ -94,14 +96,125 @@ namespace SAMP.DAL
             return saveRes;
         }
 
-        public SOWSearchRes GetSOWs(SearchFiltersReq req)
+        public SOWSearchResponse GetSOWs(SearchFiltersReq req)
         {
+            var length = req.Filters.Count;
+            var dynamicWhereCondition = string.Empty;
+
+            int ii = 1, ji = 0;
+            var result = ii / ji;
+
+            for (var i = 0; i < length; i++)
+            {
+                var filterName = req.Filters[i].FilterName;
+                var filterValue = req.Filters[i].FilterValue;
+                var filterValueMatch = req.Filters[i].FilterValueMatch;
+
+                dynamicWhereCondition = dynamicWhereCondition + " AND " + "[" + filterName + "]";
+                if (filterValueMatch == "Exact")
+                {
+                    dynamicWhereCondition = dynamicWhereCondition + " = '" + filterValue + "'";
+                }
+                else if (filterValueMatch == "LikeBefore")
+                {
+                    dynamicWhereCondition = dynamicWhereCondition + " LIKE '%" + filterValue + "'";
+                }
+                else if (filterValueMatch == "LikeAfter")
+                {
+                    dynamicWhereCondition = dynamicWhereCondition + " LIKE '" + filterValue + "%'";
+                }
+                else if (filterValueMatch == "LikeBoth")
+                {
+                    dynamicWhereCondition = dynamicWhereCondition + " LIKE '%" + filterValue + "%'";
+                }
+            }
+
             var queryParameters = new DynamicParameters();
 
-            queryParameters.Add("@FilterName", req.Filters[0].FilterName);
-            queryParameters.Add("@FilterValue", req.Filters[0].FilterValue);
+            queryParameters.Add("@WhereConditions", dynamicWhereCondition);
 
-            var data = new SOWSearchRes();
+            var reader = SqlMapper.QueryMultiple(con, "dbo.sp_SOWMasterSelect", queryParameters, commandType: StoredProcedure);
+
+            var SOWMastersTableList = reader.Read<SOWMasterTable>().ToList();
+            var ResourceUtilizationDetailsTableList = reader.Read<ResourceUtilizationDetailsTable>().ToList();
+            var PricingScheduleDetailsTableList = reader.Read<PricingScheduleDetailsTable>().ToList();
+
+            var sowCount = SOWMastersTableList.Count;
+
+            SOWSearchResponse sOWSearchResponse = new SOWSearchResponse()
+            {
+                Request = new ResponseSR() { EsSOWMaster = new EsSOWMasterSR() { SOWMasters = new List<SOWMasterSR>(sowCount) } }
+            };
+
+            var listRow = 0;
+            foreach (var item in SOWMastersTableList)
+            {
+                sOWSearchResponse.Request.EsSOWMaster.SOWMasters.Add(
+                    new SOWMasterSR
+                    {
+                        SOWId = item.SOWId,
+                        SowNo = item.SOWNo,
+                        SowDesc = item.SOWDesc,
+                        SOWStartDate = item.StartDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                        SOWEndDate = item.EndDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                        PO = item.PO,
+                        SOWType_SystemParamId = item.SOWType_SystemParamId,
+                        ActionBySPOC = item.ActionBySPOC,
+                        SOWAmount = item.SOWAmount,
+                        AccountId = item.AccountId,
+                        CustMgrId = item.CustMgrId,
+                        Status_SystemParamId = item.Status_SystemParamId,
+                        PartialBilliing = item.PartialBilliing,
+                        FOC = item.FOC
+                    });
+
+                sOWSearchResponse.Request.EsSOWMaster.SOWMasters[listRow].ResourceUtilizationDetails = new List<ResourceUtilizationDetailSearchResponse>();
+
+                foreach (var RUD in ResourceUtilizationDetailsTableList)
+                {
+                    if (item.SOWId == RUD.SOWId)
+                    {
+                        sOWSearchResponse.Request.EsSOWMaster.SOWMasters[listRow].ResourceUtilizationDetails.Add(
+                            new ResourceUtilizationDetailSearchResponse
+                            {
+                                ResourceUtilizationId = RUD.ResourceUtilizationId,
+                                SOWId = RUD.SOWId,
+                                ResourceId = RUD.ResourceId,
+                                WorkOrderStartDate = RUD.WorkOrderStartDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                                WorkOrderEndDate = RUD.WorkOrderEndDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                                BenchStartDate = RUD.BenchStartDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                                BenchEndDate = RUD.BenchEndDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                                FoCStartDate = RUD.FoCStartDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture),
+                                FoCEndDate = RUD.FoCEndDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture)
+                            });
+                    }
+                }
+
+                sOWSearchResponse.Request.EsSOWMaster.SOWMasters[listRow].PricingScheduleDetails = new List<PricingScheduleDetailSearchResponse>();
+
+                foreach (var PSD in PricingScheduleDetailsTableList)
+                {
+                    if (item.SOWId == PSD.SOWId)
+                    {
+                        sOWSearchResponse.Request.EsSOWMaster.SOWMasters[listRow].PricingScheduleDetails.Add(
+                            new PricingScheduleDetailSearchResponse
+                            {
+                                PricingSchId = PSD.PricingSchId,
+                                SOWId = PSD.SOWId,
+                                MonthName = PSD.MonthName,
+                                BillableDays = PSD.BillableDays,
+                                MilestoneName = PSD.MilestoneName,
+                                MilestoneValue = PSD.MilestoneValue,
+                                RevisionNumber = PSD.RevisionNumber,
+                                RevisionDate = PSD.RevisionDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture)
+                            });
+                    }
+                }
+
+                listRow++;
+            }
+
+            var data = sOWSearchResponse;
 
             return data;
         }

@@ -1,5 +1,6 @@
 ﻿using SAMP.API.Common;
 using SAMP.BAL;
+using SAMP.Models.SearchFilters;
 using SAMP.Models.SOW;
 using System;
 using System.Linq;
@@ -28,6 +29,11 @@ namespace SAMP.API.Controllers
         /// User
         /// </summary>
         private string user = string.Empty;
+
+        /// <summary>
+        /// User
+        /// </summary>
+        private string searchFilters = string.Empty;
         #endregion
 
         #region Constructor
@@ -44,19 +50,39 @@ namespace SAMP.API.Controllers
         #endregion
 
         [HttpGet]
-        public SOWSaveRes GetSOWs(SOWReq req)
+        [Route("SOWSelect")]
+        public SOWSearchResponse GetSOWs()
         {
             logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
 
             logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
 
-            SOWSaveRes objRes = _sowMasterService.InsertSOWMaster(req, user);
+            var requestHeader = Request;
+
+            var headers = requestHeader.Headers;
+
+            if (headers.Contains("UID"))
+            {
+                var UID = headers.GetValues("UID").First();
+                user = EncryptDecrypt.Decrypt(UID);
+            }
+
+            if (headers.Contains("esFilters"))
+            {
+                searchFilters = headers.GetValues("esFilters").First();
+            }
+
+            SearchFiltersReq req = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchFiltersReq>(searchFilters);
+
+            SOWSearchResponse objRes = _sowMasterService.GetSOWs(req);
+
+            logger.Info(string.Format("{0}.{1} - END", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
 
             return objRes;
         }
 
         [HttpPost]
-        [ResponseType(typeof(SOWSaveRes))]        
+        [ResponseType(typeof(SOWSaveRes))]
         [Route("SOWInsert")]
         public IHttpActionResult Post(SOWReq req)
         {
