@@ -11,15 +11,15 @@ namespace SAMP.Models.Common
 
     public partial class Response
     {     
-        public EsRemarks EsRemarks { get; set; }
+        public EsRemarksRes EsRemarks { get; set; }
     }
 
-    public partial class EsRemarks
+    public partial class EsRemarksRes
     {     
-        public List<RemarksDetail> Remarks { get; set; }
+        public List<RemarksDetailRes> RemarksDetails { get; set; }
     }
 
-    public partial class RemarksDetail
+    public partial class RemarksDetailRes
     {
         public int RemarksId { get; set; }
         public string RemarksDetails { get; set; }

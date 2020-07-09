@@ -15,9 +15,7 @@ namespace SAMP.DAL.Commands
         {
             var queryParameters = new DynamicParameters();
             queryParameters.Add("@ColumnName", req.Request.EsRemarks.RemarksDetails.ColumnName);
-            queryParameters.Add("@ColumnValue", req.Request.EsRemarks.RemarksDetails.ColumnValue);
-
-            var data = new RemarksRes();
+            queryParameters.Add("@ColumnValue", req.Request.EsRemarks.RemarksDetails.ColumnValue);            
 
             var reader = SqlMapper.QueryMultiple(con, "dbo.sp_RemarksDetailsSelect", queryParameters, commandType: StoredProcedure);
 
@@ -27,19 +25,21 @@ namespace SAMP.DAL.Commands
 
             RemarksRes remarksResponse = new RemarksRes()
             {
-                Response = new Response() { EsRemarks = new EsRemarks() { Remarks = new List<RemarksDetail>(remarksCount) } }
+                Response = new Response() { EsRemarks = new EsRemarksRes() { RemarksDetails = new List<RemarksDetailRes>(remarksCount) } }
             };
 
             foreach (var item in RemarksTableList)
             {
-                remarksResponse.Response.EsRemarks.Remarks.Add(
-                    new RemarksDetail
+                remarksResponse.Response.EsRemarks.RemarksDetails.Add(
+                    new RemarksDetailRes
                     {
                         RemarksId = item.RemarksId,
                         RemarksDetails = item.RemarksDetails,
                         Remarksdate = item.Remarksdate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture)
                     });
             }
+
+            var data = remarksResponse;
 
             return data;
         }

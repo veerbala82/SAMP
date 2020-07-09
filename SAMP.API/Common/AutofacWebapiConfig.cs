@@ -2,6 +2,8 @@
 using Autofac.Integration.WebApi;
 using SAMP.BAL;
 using SAMP.DAL;
+using SAMP.DAL.Commands;
+using SAMP.DAL.Interfaces;
 using System.Reflection;
 using System.Web.Http;
 
@@ -57,6 +59,14 @@ namespace SAMP.API.Common
 
             builder.RegisterType<SOWMasterService>()
                    .As<ISOWMasterService>()
+                   .InstancePerRequest();
+
+            builder.RegisterType<RemarksCommands>()
+            .As<IRemarksCommands>()
+            .InstancePerRequest();
+
+            builder.RegisterType<RemarksService>()
+                   .As<IRemarksService>()
                    .InstancePerRequest();
 
             ////Set the dependency resolver to be Autofac.

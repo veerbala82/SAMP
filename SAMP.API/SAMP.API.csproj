@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Common\ApiException.cs" />
     <Compile Include="Common\ApiExceptionFilterAttribute.cs" />
     <Compile Include="Common\AutofacWebapiConfig.cs" />
     <Compile Include="Common\Bootstrapper.cs" />

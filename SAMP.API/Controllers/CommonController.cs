@@ -53,7 +53,9 @@ namespace SAMP.API.Controllers
 
             logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
 
-            RemarksRes objRes = _remarksService.GetRemarks(req);          
+            RemarksRes objRes = _remarksService.GetRemarks(req);
+
+            logger.Info(string.Format("{0}.{1} - END", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
 
             return objRes;
         }

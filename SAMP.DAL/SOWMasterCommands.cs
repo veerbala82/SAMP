@@ -101,6 +101,7 @@ namespace SAMP.DAL
             var length = req.Filters.Count;
             var dynamicWhereCondition = string.Empty;
 
+            //Testing Code
             int ii = 1, ji = 0;
             var result = ii / ji;
 
