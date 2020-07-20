@@ -4172,3 +4172,639 @@ log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SA
 log4net: Created Appender [RollingLogFileAppender]
 log4net: Adding appender named [RollingLogFileAppender] to logger [root].
 log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\b737e959_9159d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\528ef0b1_9159d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\170e23c8_9159d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\810a4f38_9459d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\99b3b2b2_a459d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\51330416_a559d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\51330416_a559d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\74300469_a859d601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-14] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\11c970f3_515ed601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-14] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-20] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\7c82dd7e_525ed601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-14] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-20] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\a2884297_5b5ed601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-14] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-20] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\e0f8e65b_5c5ed601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-14] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-20] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\49f30b26_625ed601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-14] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-20] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []
+log4net: log4net assembly [log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\0a74bf68\00c7c1c4_1398d201\log4net.dll]. (.NET Runtime [4.0.30319.42000] on Microsoft Windows NT 6.2.9200.0)
+log4net: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository for assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\42278aad\2560825e\assembly\dl3\f83da8c7\4019769e_625ed601\SAMP.API.dll]
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: Assembly [SAMP.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: configuring repository [log4net-default-repository] using .config file section
+log4net: Application config file is [F:\Development\Colt\API\SAMP\SAMP.API\web.config]
+log4net: Configuring Repository [log4net-default-repository]
+log4net: Configuration update mode [Merge].
+log4net: Logger [root] Level string is [TRACE].
+log4net: Logger [root] level set to [name="TRACE",value=20000].
+log4net: Loading Appender [RollingLogFileAppender] type: [log4net.Appender.RollingFileAppender]
+log4net: Setting Property [File] to String value [Logs\SAMP.log]
+log4net: Setting Property [AppendToFile] to Boolean value [True]
+log4net: Setting Property [RollingStyle] to RollingMode value [Date]
+log4net: Setting Property [StaticLogFileName] to Boolean value [False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: Type = [0], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [1], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [2], r0 = [.1970-01-01], r1 = [.1970-01-01]
+log4net: Type = [3], r0 = [.1970-01-01], r1 = [.1970-01-02]
+log4net: Searched for existing files in [F:\Development\Colt\API\SAMP\SAMP.API\Logs]
+log4net: Ignoring file [samp.log.2020-06-12] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-14] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-15] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-16] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-18] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-21] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-06-22] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-03] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-05] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-06] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-07] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-09] because it is from a different date period
+log4net: Ignoring file [samp.log.2020-07-14] because it is from a different date period
+log4net: curSizeRollBackups starts at [0]
+log4net: Opening file for writing [F:\Development\Colt\API\SAMP\SAMP.API\Logs\SAMP.log.2020-07-20] append [True]
+log4net: Created Appender [RollingLogFileAppender]
+log4net: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: Hierarchy Threshold []

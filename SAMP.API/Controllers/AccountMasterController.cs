@@ -1,10 +1,10 @@
 ﻿using SAMP.API.Common;
 using SAMP.BAL;
 using SAMP.BAL.Interfaces;
+using SAMP.Models.AccountMaster;
 using SAMP.Models.Common;
 using SAMP.Models.SearchFilters;
 using SAMP.Models.SOW;
-using SAMP.Models.SystemParameters;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -14,8 +14,8 @@ using System.Web.Http.Description;
 namespace SAMP.API.Controllers
 {
     [CustomAuthorize]
-    [RoutePrefix("Api/Common")]
-    public class CommonController : ApiController
+    [RoutePrefix("Api/AccountMaster")]
+    public class AccountMasterController : ApiController
     {
         #region Private Members
         /// <summary>
@@ -24,14 +24,9 @@ namespace SAMP.API.Controllers
         private static log4net.ILog logger = null;
 
         /// <summary>
-        /// IRemarksService object
+        /// ICustomerDeliveryService object
         /// </summary>
-        private readonly IRemarksService _remarksService;
-
-        /// <summary>
-        /// IRemarksService object
-        /// </summary>
-        private readonly ISystemParametersService _spService;
+        private readonly IAccountMasterService _aMService;
 
         /// <summary>
         /// User
@@ -49,18 +44,17 @@ namespace SAMP.API.Controllers
         /// CommonController Constructor
         /// </summary>
         /// <param name=""></param>
-        public CommonController(IRemarksService remarksService, ISystemParametersService spService)
+        public AccountMasterController(IAccountMasterService aMService)
         {
-            _remarksService = remarksService;
-            _spService = spService;
+            this._aMService = aMService;
             logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
             logger.Info(string.Format("{0}.{1} - START", DateTime.Now, DateTime.Now.Day));
         }
         #endregion
 
         [HttpGet]
-        [Route("RemarksDetails")]
-        public RemarksRes GetRemarksDetails()
+        //[Route("AccountMaster")]
+        public AMRes GetAccountMasterDetails()
         {
             logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
 
@@ -77,33 +71,7 @@ namespace SAMP.API.Controllers
 
             SearchFiltersReq req = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchFiltersReq>(searchFilters);
 
-            RemarksRes objRes = _remarksService.GetRemarks(req);
-
-            logger.Info(string.Format("{0}.{1} - END", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
-
-            return objRes;
-        }
-
-        [HttpGet]
-        [Route("SystemParameters")]
-        public SPRes GetSystemParameters()
-        {
-            logger.Info(Environment.NewLine + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + Environment.NewLine);
-
-            logger.Info(string.Format("{0}.{1} - START", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
-
-            var requestHeader = Request;
-
-            var headers = requestHeader.Headers;
-
-            if (headers.Contains("esFilters"))
-            {
-                searchFilters = headers.GetValues("esFilters").First();
-            }
-
-            SearchFiltersReq req = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchFiltersReq>(searchFilters);
-
-            SPRes objRes = _spService.GetSystemParameters(req);
+            AMRes objRes = _aMService.GetAccountMaster(req);
 
             logger.Info(string.Format("{0}.{1} - END", this.GetType().Name, MethodBase.GetCurrentMethod().Name));
 

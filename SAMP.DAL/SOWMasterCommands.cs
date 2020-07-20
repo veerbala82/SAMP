@@ -102,14 +102,17 @@ namespace SAMP.DAL
             var dynamicWhereCondition = string.Empty;
 
             //Testing Code
-            int ii = 1, ji = 0;
-            var result = ii / ji;
+            //int ii = 1, ji = 0;
+            //var result = ii / ji;
 
             for (var i = 0; i < length; i++)
             {
                 var filterName = req.Filters[i].FilterName;
                 var filterValue = req.Filters[i].FilterValue;
                 var filterValueMatch = req.Filters[i].FilterValueMatch;
+
+                if (string.IsNullOrEmpty(filterName))
+                    continue;
 
                 dynamicWhereCondition = dynamicWhereCondition + " AND " + "[" + filterName + "]";
                 if (filterValueMatch == "Exact")

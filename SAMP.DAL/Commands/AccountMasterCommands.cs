@@ -1,22 +1,20 @@
 ﻿using Dapper;
 using static System.Data.CommandType;
-using System.Data;
-using SAMP.Models.Common;
 using SAMP.DAL.Interfaces;
 using System.Linq;
 using System.Collections.Generic;
-using System.Globalization;
+using SAMP.Models.AccountMaster;
 using SAMP.Models.SearchFilters;
 
 namespace SAMP.DAL.Commands
 {
-    public class RemarksCommands : BaseCommand, IRemarksCommands
+    public class AccountMasterCommands : BaseCommand, IAccountMasterCommands
     {
-        public RemarksRes GetRemarks(SearchFiltersReq req)
+        public AMRes GetAccountMaster(SearchFiltersReq req)
         {
             var length = req.Filters.Count;
             var dynamicWhereCondition = string.Empty;
-          
+
             for (var i = 0; i < length; i++)
             {
                 var filterName = req.Filters[i].FilterName;
@@ -49,29 +47,31 @@ namespace SAMP.DAL.Commands
 
             queryParameters.Add("@WhereConditions", dynamicWhereCondition);
 
-            var reader = SqlMapper.QueryMultiple(con, "dbo.sp_RemarksDetailsSelect", queryParameters, commandType: StoredProcedure);
+            var reader = SqlMapper.QueryMultiple(con, "dbo.sp_AccountMasterSelect", queryParameters, commandType: StoredProcedure);
 
-            var RemarksTableList = reader.Read<RemarksDetailsTable>().ToList();
+            var AccountMasterTableList = reader.Read<AccountMasterTable>().ToList();
 
-            var remarksCount = RemarksTableList.Count;
+            var aMCount = AccountMasterTableList.Count;
 
-            RemarksRes remarksResponse = new RemarksRes()
+            AMRes aMResponse = new AMRes()
             {
-                Response = new Response() { EsRemarks = new EsRemarksRes() { RemarksDetails = new List<RemarksDetailRes>(remarksCount) } }
+                Response = new Response() { EsAccountMaster = new EsAccountMasterRes() { AccountMaster = new List<AccountMasterRes>(aMCount) } }
             };
 
-            foreach (var item in RemarksTableList)
+            foreach (var item in AccountMasterTableList)
             {
-                remarksResponse.Response.EsRemarks.RemarksDetails.Add(
-                    new RemarksDetailRes
+                aMResponse.Response.EsAccountMaster.AccountMaster.Add(
+                    new AccountMasterRes
                     {
-                        RemarksId = item.RemarksId,
-                        RemarksDetails = item.RemarksDetails,
-                        Remarksdate = item.Remarksdate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture)
+                        AccountId = item.AccountId,
+                        CustomerName = item.CustomerName,
+                        CustomerLocation = item.CustomerLocation,
+                        SOWAccountName = item.SOWAccountName,
+                        DisplayName = item.DisplayName
                     });
             }
 
-            var data = remarksResponse;
+            var data = aMResponse;
 
             return data;
         }

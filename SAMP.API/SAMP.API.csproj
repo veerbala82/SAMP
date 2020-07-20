@@ -139,6 +139,7 @@
     <Compile Include="Common\CustomAuthorize.cs" />
     <Compile Include="Common\Log4NetExceptionLogger.cs" />
     <Compile Include="Common\ValidateModelFilter.cs" />
+    <Compile Include="Controllers\AccountMasterController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LoginController.cs" />

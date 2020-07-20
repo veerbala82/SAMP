@@ -31,7 +31,7 @@ namespace SAMP.API.Controllers
         private string user = string.Empty;
 
         /// <summary>
-        /// User
+        /// searchFilters
         /// </summary>
         private string searchFilters = string.Empty;
         #endregion
@@ -59,13 +59,7 @@ namespace SAMP.API.Controllers
 
             var requestHeader = Request;
 
-            var headers = requestHeader.Headers;
-
-            if (headers.Contains("UID"))
-            {
-                var UID = headers.GetValues("UID").First();
-                user = EncryptDecrypt.Decrypt(UID);
-            }
+            var headers = requestHeader.Headers;           
 
             if (headers.Contains("esFilters"))
             {

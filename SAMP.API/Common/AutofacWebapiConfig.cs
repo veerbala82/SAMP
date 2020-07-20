@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using SAMP.BAL;
+using SAMP.BAL.Interfaces;
+using SAMP.BAL.Services;
 using SAMP.DAL;
 using SAMP.DAL.Commands;
 using SAMP.DAL.Interfaces;
@@ -67,6 +69,22 @@ namespace SAMP.API.Common
 
             builder.RegisterType<RemarksService>()
                    .As<IRemarksService>()
+                   .InstancePerRequest();
+
+            builder.RegisterType<AccountMasterCommands>()
+            .As<IAccountMasterCommands>()
+            .InstancePerRequest();
+
+            builder.RegisterType<AccountMasterService>()
+                   .As<IAccountMasterService>()
+                   .InstancePerRequest();
+
+            builder.RegisterType<SystemParametersCommands>()
+          .As<ISystemParametersCommands>()
+          .InstancePerRequest();
+
+            builder.RegisterType<SystemParametersService>()
+                   .As<ISystemParametersService>()
                    .InstancePerRequest();
 
             ////Set the dependency resolver to be Autofac.

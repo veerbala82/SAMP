@@ -1,22 +1,20 @@
 ﻿using Dapper;
 using static System.Data.CommandType;
-using System.Data;
-using SAMP.Models.Common;
 using SAMP.DAL.Interfaces;
 using System.Linq;
 using System.Collections.Generic;
-using System.Globalization;
+using SAMP.Models.SystemParameters;
 using SAMP.Models.SearchFilters;
 
 namespace SAMP.DAL.Commands
 {
-    public class RemarksCommands : BaseCommand, IRemarksCommands
+    public class SystemParametersCommands : BaseCommand, ISystemParametersCommands
     {
-        public RemarksRes GetRemarks(SearchFiltersReq req)
+        public SPRes GetSystemParameters(SearchFiltersReq req)
         {
             var length = req.Filters.Count;
             var dynamicWhereCondition = string.Empty;
-          
+
             for (var i = 0; i < length; i++)
             {
                 var filterName = req.Filters[i].FilterName;
@@ -49,29 +47,31 @@ namespace SAMP.DAL.Commands
 
             queryParameters.Add("@WhereConditions", dynamicWhereCondition);
 
-            var reader = SqlMapper.QueryMultiple(con, "dbo.sp_RemarksDetailsSelect", queryParameters, commandType: StoredProcedure);
+            var reader = SqlMapper.QueryMultiple(con, "dbo.sp_SystemParametersSelect", queryParameters, commandType: StoredProcedure);
 
-            var RemarksTableList = reader.Read<RemarksDetailsTable>().ToList();
+            var SystemParametersTableList = reader.Read<SystemParametersTable>().ToList();
 
-            var remarksCount = RemarksTableList.Count;
+            var aMCount = SystemParametersTableList.Count;
 
-            RemarksRes remarksResponse = new RemarksRes()
+            SPRes SPResponse = new SPRes()
             {
-                Response = new Response() { EsRemarks = new EsRemarksRes() { RemarksDetails = new List<RemarksDetailRes>(remarksCount) } }
+                Response = new Response() { EsSystemParameters = new EsSystemParametersRes() { SystemParameters = new List<SystemParametersRes>(aMCount) } }
             };
 
-            foreach (var item in RemarksTableList)
+            foreach (var item in SystemParametersTableList)
             {
-                remarksResponse.Response.EsRemarks.RemarksDetails.Add(
-                    new RemarksDetailRes
+                SPResponse.Response.EsSystemParameters.SystemParameters.Add(
+                    new SystemParametersRes
                     {
-                        RemarksId = item.RemarksId,
-                        RemarksDetails = item.RemarksDetails,
-                        Remarksdate = item.Remarksdate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture)
+                        SystemParamId = item.SystemParamId,
+                        Code = item.Code,
+                        Name = item.Name,
+                        Description = item.Description,
+                        Active = item.Active
                     });
             }
 
-            var data = remarksResponse;
+            var data = SPResponse;
 
             return data;
         }

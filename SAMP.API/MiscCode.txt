@@ -26,3 +26,26 @@
 	  sOWSearchResponse.Request.EsSOWMaster.SOWMasters[i].ResourceUtilizationDetails = new List<ResourceUtilizationDetailSearchResponse>();
 
                     sOWSearchResponse.Request.EsSOWMaster.SOWMasters[i].ResourceUtilizationDetails.Add(new ResourceUtilizationDetailSearchResponse { ResourceUtilizationId = RUD.ResourceUtilizationId, SOWId = RUD.SOWId, ResourceId = RUD.ResourceId });
+
+Search Filters
+{"Filters":[{"filterName":"ResourceId","filterValue":"1","FilterValueMatch":"Exact"}]}
+{"Filters":[{"FilterName":"SOWNo","FilterValue":"SOW030720_01","FilterValueMatch":"Exact"},{"FilterName":"SOWDesc","FilterValue":"TEST","FilterValueMatch":"LikeBoth"}]}
+
+Account
+{"Filters":[{"filterName":"AccountId","filterValue":"1","FilterValueMatch":"Exact"}]}
+
+System Parameters
+{"Filters":[{"filterName":"Code","filterValue":"Resource","FilterValueMatch":"Exact"}]}
+
+Old Search Structure
+{
+    "Request": {
+        "EsSP": {
+            "SystemParameters": 
+                {
+                    "ColumnName": "Code",
+                    "ColumnValue": "Resource"
+                }
+        }
+    }
+}
